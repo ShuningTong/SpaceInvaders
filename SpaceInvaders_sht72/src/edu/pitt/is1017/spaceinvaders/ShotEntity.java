@@ -63,11 +63,10 @@ public class ShotEntity extends Entity {
 			// remove the affected entities
 			game.removeEntity(this);
 			game.removeEntity(other);
-			
+			game.getScoreTracker().recordScore(1);
 			// notify the game that the alien has been killed
 			game.notifyAlienKilled();
 			used = true;
-			game.getScoreTracker().recordScore(1);
 		}
 	}
 }

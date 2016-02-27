@@ -103,12 +103,13 @@ public class LoginGUI {
 		frame.getContentPane().add(btnLogin);
 		
 		btnRegister = new JButton("Register");
-		/*btnRegister.addMouseListener(new MouseAdapter() {
+		btnRegister.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				RegisterGUI newRegister = new RegisterGUI();
+				newRegister.getFrame().setVisible(true);
 			}
-		});*/
+		});
 		btnRegister.setBounds(37, 162, 117, 29);
 		frame.getContentPane().add(btnRegister);
 		

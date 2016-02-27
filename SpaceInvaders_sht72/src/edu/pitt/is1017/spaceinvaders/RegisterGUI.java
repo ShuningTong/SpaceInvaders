@@ -117,7 +117,7 @@ public class RegisterGUI {
 					if(txtPassword.getText().equals(txtConfirmPassword.getText())){
 						User new_user = new User(txtLastName.getText(), txtFirstName.getText(), txtEmail.getText(), txtPassword.getText());
 						JOptionPane.showMessageDialog(null, "Successfully registered!");
-						System.exit(0);
+						frame.dispose();
 					}else{
 						JOptionPane.showMessageDialog(null, "Password does not match the confirm password!");
 					}
@@ -131,10 +131,14 @@ public class RegisterGUI {
 		btnCancel.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.exit(0);
+				frame.dispose();
 			}
 		});
 		btnCancel.setBounds(300, 230, 117, 29);
 		frame.getContentPane().add(btnCancel);
+	}
+
+	public JFrame getFrame() {
+		return frame;
 	}
 }
